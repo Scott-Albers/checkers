@@ -1,0 +1,20 @@
+[
+  {
+    "_id": { "$oid": "0123456789012345678900G1" },
+    "player1Id" : { "$oid": "0123456789012345678900P1" },
+    "player2Id" : { "$oid": "0123456789012345678900P2" },
+    "active": true,
+    "dataCreated": { "$date": "2016-03-15T00:00:00.000Z" },
+    "board" : { [
+      { x: 2, y: 1, player: 1, king: false},
+      { x: 4, y: 1, player: 1, king: false},
+      ] },
+  },
+  {
+    "_id": { "$oid": "012345678901234567890002" },
+    "name" : "Bal",
+    "gamesWon" : 5,
+    "gamesLost": 1,
+    "dataCreated": { "$date": "2016-01-15T00:00:00.000Z" }
+  }
+]
