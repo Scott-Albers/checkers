@@ -19,7 +19,7 @@ describe('players', () => {
       request(app)
       .get('/players')
       .end((err, rsp) => {
-        console.log('response.body:', rsp.body);
+        // console.log('response.body:', rsp.body);
         expect(err).to.be.null;
         expect(rsp.status).to.equal(200);
         expect(rsp.body.players).to.have.length(2);
