@@ -9,22 +9,22 @@ import moveBodyValidator from '../validators/games/move_body';
 const router = module.exports = express.Router();
 
 // index
-// router.get('/', (req, res) => {
-//   Player.find()
-//           // .sort(res.locals.sort)
-//           // .limit(res.locals.limit)
-//           // .skip(res.locals.skip)
-//           .exec((err, players) => {
-//             res.send({ players });
-//           });
-// });
+router.get('/', (req, res) => {
+  Game.find()
+          // .sort(res.locals.sort)
+          // .limit(res.locals.limit)
+          // .skip(res.locals.skip)
+          .exec((err, games) => {
+            res.send({ games });
+          });
+});
 
 // show
-// router.get('/:id', paramsValidator, (req, res) => {
-//   Bookmark.findById(req.params.id, (err, bookmark) => {
-//     res.send({ bookmark });
-//   });
-// });
+router.get('/:id', paramsValidator, (req, res) => {
+  Game.findById(req.params.id, (err, game) => {
+    res.send({ game });
+  });
+});
 
 // create new game
 router.post('/', bodyValidator, (req, res) => {

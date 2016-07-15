@@ -27,7 +27,9 @@ router.get('/', (req, res) => {
 
 // create new player
 router.post('/', (req, res) => {
+  console.log('-----------------------------------------:', req.body);
   Player.create(req.body, (err, player) => {
+    console.log('Player create req.body:', req.body, 'error:', err);
     res.send({ player });
   });
 });
